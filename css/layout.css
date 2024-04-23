@@ -684,7 +684,6 @@ ul#nav li.current a {
 
 #client {
   background: #1f1f1f url(../images/background.jpg) no-repeat center center;
-  opacity: 0.1;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
