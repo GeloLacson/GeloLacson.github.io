@@ -110,32 +110,32 @@ jQuery(document).ready(function($) {
           case 0:
             $(".skills .bar-expand")
               .eq(0)
-              .addClass("html5");
+              .addClass("first");
             break;
           case 1:
             $(".skills .bar-expand")
               .eq(1)
-              .addClass("asp");
+              .addClass("second");
             break;
           case 2:
             $(".skills .bar-expand")
               .eq(2)
-              .addClass("sitecore");
+              .addClass("third");
             break;
           case 3:
             $(".skills .bar-expand")
               .eq(3)
-              .addClass("kendo");
+              .addClass("fourth");
             break;
           case 4:
             $(".skills .bar-expand")
               .eq(4)
-              .addClass("sql");
+              .addClass("fifth");
             break;
           case 5:
             $(".skills .bar-expand")
               .eq(5)
-              .addClass("reactjs");
+              .addClass("sixth");
             break;
         }
       }
@@ -148,7 +148,7 @@ jQuery(document).ready(function($) {
   /*	Modal Popup
 ------------------------------------------------------*/
 
-  $(".item-wrap a").magnificPopup({
+  $(".item-wrap a, .item-wrap-portfolio a").magnificPopup({
     type: "inline",
     fixedContentPos: false,
     removalDelay: 200,
@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
     controlsContainer: ".flex-container",
     animation: "slide",
     controlNav: true,
-    directionNav: false,
+    directionNav: true,
     smoothHeight: true,
     slideshowSpeed: 7000,
     animationSpeed: 600,
@@ -224,4 +224,15 @@ jQuery(document).ready(function($) {
     //   });
     //   return false;
   });
+
+  $('#emailLink').on('click', function (e) {
+        e.preventDefault();
+
+        const email = $(this).text().trim();
+
+        // Construct mailto link
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+
+        window.open(mailtoLink, "_blank");
+      });
 });
