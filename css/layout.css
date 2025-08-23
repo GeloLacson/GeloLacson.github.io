@@ -34,7 +34,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(../images/background.jpg) no-repeat;
+  background: #161415 url(../images/background.jpg) no-repeat center center;
   opacity: 1;
   background-size: cover !important;
   -webkit-background-size: cover !important;
@@ -334,16 +334,6 @@ ul#nav li.current a {
   font-family: "opensans-bold", sans-serif;
 }
 
-#skills a,
-#skills a:visited {
-  color: #9b59b6;
-}
-
-#skills a:hover,
-#skills a:focus {
-  color: #fff;
-}
-
 #skills h1 {
   font: 18px/24px "opensans-bold", sans-serif;
   text-transform: uppercase;
@@ -365,116 +355,56 @@ ul#nav li.current a {
   padding-right: 10%;
 }
 
-/* Bars container */
-.bars {
-  width: 95%;
-  float: left;
-  padding: 0;
-  text-align: left;
+.skills-section {
+  padding: 2rem;
+  background-color: #161415;
+  color: white;
 }
 
-/* Skills list */
-.bars .skills {
-  margin-top: 36px;
+.skills-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #9b59b6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  margin-bottom: 10%;
+}
+
+.skill-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: white; /* theme color */
+}
+
+.skill-category ul {
   list-style: none;
   padding-left: 0;
-}
-
-.bars li {
-  position: relative;
-  margin-bottom: 60px;
-  background: #444; /* lighter gray for bar background */
-  height: 42px;
-  border-radius: 3px;
-}
-
-/* Skill label */
-.bars li em {
-  font: 15px "opensans-bold", sans-serif;
-  color: #eee; /* lighter text on dark background */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: normal;
-  position: relative;
-  top: -36px;
-  padding-left: 10px;
-  z-index: 2;
-}
-
-/* Skill bar */
-.bar-expand {
-  position: absolute;
-  left: 0;
-  top: 0;
   margin: 0;
-  padding-right: 24px;
-  background: #9b59b6; /* your signature blue */
-  display: inline-block;
-  height: 42px;
-  line-height: 42px;
-  border-radius: 3px 0 0 3px;
-  z-index: 1;
-  animation-fill-mode: forwards;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.first {
-  width: 90%;
-  animation: first 1.5s ease forwards;
+.skill-category ul li {
+  background-color: #9b59b6;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  cursor: default;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.second {
-  width: 85%;
-  animation: second 1.5s ease forwards;
+.skill-category ul li:hover {
+  background-color: #8e44ad;
+  transform: scale(1.05);
 }
-
-.third {
-  width: 80%;
-  animation: third 1.5s ease forwards;
-}
-
-.fourth {
-  width: 75%;
-  animation: fourth 1.5s ease forwards;
-}
-
-.fifth {
-  width: 60%;
-  animation: fifth 1.5s ease forwards;
-}
-
-.sixth {
-  width: 50%;
-  animation: sixth 1.5s ease forwards;
-}
-
-/* Keyframes for animation */
-
-@keyframes first {
-  0% { width: 0; }
-  100% { width: 90%; }
-}
-@keyframes second {
-  0% { width: 0; }
-  100% { width: 85%; }
-}
-@keyframes third {
-  0% { width: 0; }
-  100% { width: 80%; }
-}
-@keyframes fourth {
-  0% { width: 0; }
-  100% { width: 75%; }
-}
-@keyframes fifth {
-  0% { width: 0; }
-  100% { width: 60%; }
-}
-@keyframes sixth {
-  0% { width: 0; }
-  100% { width: 50%; }
-}
-
-
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section

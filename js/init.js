@@ -94,55 +94,6 @@ jQuery(document).ready(function($) {
       }
     }
   });
-  $(document).bind("scroll", function(ev) {
-    console.log($(document).scrollTop());
-    var skills = $(".skills");
-    var scrollOffset = $(document).scrollTop();
-    var containerOffset = skills.offset().top - window.innerHeight / 2;
-    var containerBottomOffset = skills.offset().top + window.innerHeight / 2;
-    if (
-      scrollOffset >= containerOffset &&
-      scrollOffset <= containerBottomOffset
-    ) {
-      $(document).unbind("scroll");
-      for (var i = 0; i < $(".skills .bar-expand").length; i++) {
-        switch (i) {
-          case 0:
-            $(".skills .bar-expand")
-              .eq(0)
-              .addClass("first");
-            break;
-          case 1:
-            $(".skills .bar-expand")
-              .eq(1)
-              .addClass("second");
-            break;
-          case 2:
-            $(".skills .bar-expand")
-              .eq(2)
-              .addClass("third");
-            break;
-          case 3:
-            $(".skills .bar-expand")
-              .eq(3)
-              .addClass("fourth");
-            break;
-          case 4:
-            $(".skills .bar-expand")
-              .eq(4)
-              .addClass("fifth");
-            break;
-          case 5:
-            $(".skills .bar-expand")
-              .eq(5)
-              .addClass("sixth");
-            break;
-        }
-      }
-    } else {
-      $(document).bind("scroll");
-    }
-  });
 
   /*----------------------------------------------------*/
   /*	Modal Popup
