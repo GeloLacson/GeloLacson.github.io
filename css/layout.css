@@ -34,7 +34,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(../images/background.jpg) no-repeat center center;
+  background: #161415 url(../images/background_new.png) no-repeat center center;
   opacity: 1;
   background-size: cover !important;
   -webkit-background-size: cover !important;
@@ -104,7 +104,7 @@ header .social li a {
   color: #fff;
 }
 header .social li a:hover {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 /* scrolldown link */
@@ -128,7 +128,7 @@ header .scrolldown a {
   transition: all 0.3s ease-in-out;
 }
 header .scrolldown a:hover {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 /* primary navigation
@@ -199,7 +199,7 @@ ul#nav li a:active {
   background-color: transparent !important;
 }
 ul#nav li.current a {
-  color: #de93ff;
+  color: #9a56ff;
 }
 
 /* ------------------------------------------------------------------ */
@@ -219,7 +219,7 @@ ul#nav li.current a {
 }
 #about a:hover,
 #about a:focus {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 #about h2 {
@@ -230,6 +230,7 @@ ul#nav li.current a {
 #about p {
   line-height: 30px;
   color: #7a7a7a;
+  font-size: larger;
 }
 #about .profile-pic {
   position: relative;
@@ -273,7 +274,7 @@ ul#nav li.current a {
 
 #cv a,
 #cv a:visited {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 #cv a:hover,
 #cv a:focus {
@@ -286,11 +287,13 @@ ul#nav li.current a {
   letter-spacing: 1px;
 }
 #cv h1 span {
-  border-bottom: 3px solid #9b59b6;
+  border-bottom: 3px solid #9a56ff;
   padding-bottom: 6px;
+   font-size: larger;
 }
 #cv h3 {
-  font: 25px/30px "opensans-bold", sans-serif;
+  font: 30px/40px "opensans-bold", sans-serif;
+  
 }
 
 #cv .header-col {
@@ -298,6 +301,10 @@ ul#nav li.current a {
 }
 #cv .main-col {
   padding-right: 10%;
+}
+
+#cv p {
+  font-size: large;
 }
 
 .education,
@@ -326,12 +333,14 @@ ul#nav li.current a {
 /*----------------------------------------------*/
 
 #skills {
-  background: #2b2b2b;
+  background: #2b2b2b url(../images/about_me.png) no-repeat center;
+  opacity: 1;
   padding-top: 90px;
   padding-bottom: 72px;
   color: white;
   overflow: hidden;
   font-family: "opensans-bold", sans-serif;
+  background-size: cover !important;
 }
 
 #skills h1 {
@@ -343,8 +352,9 @@ ul#nav li.current a {
 }
 
 #skills h1 span {
-  border-bottom: 3px solid #9b59b6;
+  border-bottom: 3px solid #9a56ff;
   padding-bottom: 6px;
+  font-size: larger;
 }
 
 #skills .header-col {
@@ -364,7 +374,7 @@ ul#nav li.current a {
 .skills-section h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 .skills-grid {
@@ -379,6 +389,7 @@ ul#nav li.current a {
   font-size: 1.8rem;
   margin-bottom: 0.75rem;
   color: white; /* theme color */
+  font-size: large;
 }
 
 .skill-category ul {
@@ -391,18 +402,19 @@ ul#nav li.current a {
 }
 
 .skill-category ul li {
-  background-color: #9b59b6;
+  background-color: #9a56ff;
   color: white;
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   white-space: nowrap;
   cursor: default;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  
 }
 
 .skill-category ul li:hover {
-  background-color: #8e44ad;
+  background-color: #4644ad;
   transform: scale(1.05);
 }
 
@@ -423,7 +435,7 @@ ul#nav li.current a {
   margin-bottom: 40px;
 }
 #portfolio h1 span {
-  border-bottom: 3px solid #9b59b6;
+  border-bottom: 3px solid #9a56ff;
   padding-bottom: 6px;
 }
 
@@ -528,55 +540,65 @@ ul#nav li.current a {
   filter: alpha(opacity=100);
 }
 
-/* popup modal */
+/* popup modal - larger */
 .popup-modal {
-  max-width: 550px;
+  max-width: 800px; /* from 550px to 800px */
   background: #fff;
   position: relative;
   margin: 0 auto;
 }
+
 .popup-modal .description-box {
-  padding: 12px 36px 18px 36px;
+  padding: 24px 48px 30px 48px; /* increase padding for more space */
 }
+
 .popup-modal .description-box h4 {
-  font: 15px/24px "opensans-bold", sans-serif;
-  margin-bottom: 12px;
+  font: 18px/28px "opensans-bold", sans-serif; /* slightly bigger heading */
+  margin-bottom: 16px;
   color: #111;
 }
+
 .popup-modal .description-box p {
-  font: 14px/24px "opensans-regular", sans-serif;
+  font: 16px/26px "opensans-regular", sans-serif; /* slightly bigger paragraph */
   color: #a1a1a1;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
+
 .popup-modal .description-box .categories {
-  font: 11px/21px "opensans-light", sans-serif;
+  font: 13px/23px "opensans-light", sans-serif; /* larger categories text */
   color: #a1a1a1;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
   text-align: left;
 }
+
 .popup-modal .description-box .categories i {
   margin-right: 8px;
 }
+
 .popup-modal .link-box {
-  padding: 18px 36px;
+  padding: 24px 48px; /* larger padding */
   background: #111;
   text-align: left;
 }
+
 .popup-modal .link-box a {
   color: #fff;
-  font: 11px/21px "opensans-bold", sans-serif;
+  font: 13px/23px "opensans-bold", sans-serif; /* larger link text */
   text-transform: uppercase;
   letter-spacing: 3px;
   cursor: pointer;
 }
+
 .popup-modal a:hover {
   color: #00cccc;
 }
+
 .popup-modal a.popup-modal-dismiss {
   margin-left: 24px;
 }
+
 
 /* fadein/fadeout effect for modal popup
 /* ------------------------------------------------------------------ */
@@ -842,7 +864,7 @@ ul#nav li.current a {
 
 #contact a,
 #contact a:visited {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 #contact a:hover,
 #contact a:focus {
@@ -912,7 +934,7 @@ ul#nav li.current a {
 #contact textarea:focus,
 #contact select:focus {
   color: #fff;
-  background-color: #9b59b6;
+  background-color: #9a56ff;
 }
 #contact button.submit {
   text-transform: uppercase;
@@ -931,7 +953,7 @@ ul#nav li.current a {
   background: #fff;
 }
 #contact span.required {
-  color: #9b59b6;
+  color: #9a56ff;
   font-size: 13px;
 }
 #message-warning,
@@ -947,7 +969,7 @@ ul#nav li.current a {
   color: #d72828;
 }
 #message-success {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 #message-warning i,
@@ -998,7 +1020,7 @@ footer a:visited {
 }
 footer a:hover,
 footer a:focus {
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 /* copyright */
@@ -1036,7 +1058,7 @@ footer .social-links li {
   margin: 0;
   padding: 0;
   margin-left: 42px;
-  color: #9b59b6;
+  color: #9a56ff;
 }
 
 footer .social-links li:first-child {
@@ -1070,5 +1092,5 @@ footer .social-links li:first-child {
   border-radius: 100%;
 }
 #go-top a:hover {
-  background-color: #9b59b6;
+  background-color: #9a56ff;
 }
