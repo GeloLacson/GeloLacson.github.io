@@ -166,6 +166,10 @@ header .scrolldown a:hover {
   color: #9a56ff;
 }
 
+header .profile-image-mobile{
+  display: none;
+}
+
 /* =========================
    MOBILE — RETAINED
    ========================= */
@@ -196,6 +200,20 @@ header .scrolldown a:hover {
   /* IMAGE HIDDEN ON MOBILE */
   header .profile-image {
     display: none;
+  }
+
+  header .profile-image-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+
+  header .profile-image-mobile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
 
