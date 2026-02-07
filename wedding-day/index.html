@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar">
-    <div class="logo">G&R</div>
+    <div class="logo">R|G</div>
     <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -17,7 +17,7 @@
     </div>
     <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#story">Our Story</a></li>
+        <li><a href="#story">About Us</a></li>
         <li><a href="#details">Details</a></li>
         <li><a href="#rsvp">RSVP</a></li>
     </ul>
@@ -31,34 +31,38 @@
         </div>
     </header>
 
-<section id="story" class="story">
-        <div class="story-container">
-        
-        <div class="story-profile">
-            <div class="photo-frame">
-                <img src="https://via.placeholder.com/500x600" alt="Gelo and Roch" class="couple-img">
-                <div class="name-overlay">
-                    <h2>Gelo & Roch</h2>
+<section id="story" class="couple-section">
+    <div class="couple-container">
+        <div class="person">
+            <div class="image-wrapper">
+                <img src="../wedding-day/images/gelo.jpg" alt="Gelo">
+                <div class="overlay-name left">
+                    <span>The Groom</span>
+                    <h2>Gelo</h2>
                 </div>
             </div>
         </div>
-
-        <div class="story-text">
-            <span class="sub-title">How it all started</span>
-            <h3>Our Journey to Forever</h3>
-            <p>
-                Dito niyo pwedeng ilagay ang maikling kwento kung paano kayo nagkakilala. 
-                Mula sa unang pagtatagpo, hanggang sa mga pagsubok na inyong nalampasan, 
-                at sa matamis na "Oo" na nagdala sa inyo sa araw na ito.
-            </p>
-            <p>
-                "Love is not just looking at each other, it's looking in the same direction."
-            </p>
-            <div class="story-signature">With Love, G&R</div>
+        <div class="person">
+            <div class="image-wrapper">
+                <img src="../wedding-day/images/gelo.jpg" alt="Roch">
+                <div class="overlay-name right">
+                    <span>The Bride</span>
+                    <h2>Roch</h2>
+                </div>
+            </div>
         </div>
-
     </div>
-    </section>
+
+    <div class="couple-full-image">
+        <div class="full-image-wrapper">
+            <img src="../wedding-day/images/gelo.jpg" alt="Gelo and Roch Together">
+            <div class="full-image-text">
+                <h3>Two Souls, One Journey</h3>
+                <p>Mula sa magkahiwalay na mundo, pinagtagpo ng tadhana.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <section id="details" class="details-section">
@@ -66,18 +70,15 @@
     <div class="details-grid">
         <div class="detail-item">
             <h3>Where</h3>
-            <p><strong>Zenella Restaurant</strong><br>Pasig City</p>
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5442063170412!2d121.08878077492328!3d14.568037885914483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7ae0d29639b%3A0xbb700076114d4227!2sZenella%20Restaurant!5e0!3m2!1sen!2sph!4v1770474294462!5m2!1sen!2sph" 
-                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
         </div>
         <div class="detail-item">
             <h3>When</h3>
-            <p><strong>March 27, 2026</strong> <br> 5:00 PM</p>
-
             <div class="calendar-card">
                 <div class="cal-month">MARCH</div>
                 <div class="cal-content">
@@ -93,7 +94,29 @@
     </div>
 </section>
 
-    <section class="countdown-container">
+    <section id="gallery" class="gallery-section">
+    <div class="gallery-header">
+        <span class="sub-title">Captured Moments</span>
+        <h2>Our Gallery</h2>
+    </div>
+    
+    <div class="gallery-grid">
+        <div class="gallery-item tall">
+            <img src="../wedding-day/images/gelo.jpg" alt="Wedding Moment 1">
+        </div>
+        <div class="gallery-item">
+            <img src="../wedding-day/images/gelo.jpg" alt="Wedding Moment 2">
+        </div>
+        <div class="gallery-item">
+            <img src="../wedding-day/images/gelo.jpg" alt="Wedding Moment 3">
+        </div>
+        <div class="gallery-item wide">
+            <img src="../wedding-day/images/gelo.jpg" alt="Wedding Moment 4">
+        </div>
+    </div>
+</section>
+
+    <section id="rsvp" class="countdown-container">
         <h2>Counting Down to Forever</h2>
         <div id="countdown">
             <div class="time-box"><span id="days">00</span><p>Days</p></div>
@@ -103,9 +126,30 @@
         </div>
     </section>
 
-    <section id="rsvp" class="rsvp">
+    <section class="rsvp">
         <a href="https://forms.gle/your-google-form-link" target="_blank" class="rsvp-btn">RSVP NOW</a>
     </section>
+
+    <section id="share-moments" class="share-section">
+    <div class="share-container">
+        <div class="share-content">
+            <span class="sub-title">Candid Memories</span>
+            <h2>Share Moments With Us</h2>
+            <p>Captured a beautiful moment during our wedding? We'd love to see it! Please upload your photos and videos to our shared album.</p>
+            
+            <div class="upload-card">
+                <div class="icon-box">
+                    <i class="fas fa-cloud-upload-alt"></i> <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg" alt="Google Drive" width="40">
+                </div>
+                <h3>Upload to Google Drive</h3>
+                <p>Click the button below to share your files directly to our folder.</p>
+                <a href="https://drive.google.com/drive/folders/1eXifrI9J7JQuRhkvVmJUuxpO9jlnLJE4?usp=sharing" target="_blank" class="upload-btn">
+                    Open Folder & Upload
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <script src="script.js"></script>
 </body>
