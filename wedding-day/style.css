@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #4a4a4a;
+    background-color: #fdfaf7; 
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1350&q=80'); /* Palitan ang URL ng prenup photo niyo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    letter-spacing: 5px;
+}
+
+.countdown-container {
+    padding: 50px 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-width: 80px;
+}
+
+.time-box span {
+    font-size: 2rem;
+    display: block;
+    color: #b5838d; 
+}
+
+.story {
+    padding: 80px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rsvp-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #b5838d;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.rsvp-btn:hover {
+    background-color: #a06e78;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b5838d;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b5838d;
+}
+
+
+section {
+    padding-top: 100px; 
+}
+
+.details-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.detail-item h3 {
+    color: #b5838d;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.rsvp {
+    padding-top: 100px;
+    padding-bottom: 150px; 
+    text-align: center;
+}
