@@ -169,6 +169,10 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
     .details-grid { gap: 60px; }
     .detail-item { min-width: 100%; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 100px 20px; }
+    .hero {
+        background-position: center;
+        background-size: 145%;
+    }
 }
 @media (max-width: 768px) {
     .navbar { padding: 15px 5%; }
@@ -180,4 +184,8 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
     .gallery-grid { grid-template-columns: 1fr; gap: 120px; margin-top: 60px; }
     .gallery-item img { width: 220px; height: 220px; }
     .full-image-wrapper { height: 400px; aspect-ratio: 3 / 4; }
+    .hero {
+        background-position: center;
+        background-size: 210%;
+    }
 }
