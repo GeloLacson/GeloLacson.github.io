@@ -184,7 +184,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
     .gallery-grid { grid-template-columns: 1fr; gap: 120px; margin-top: 60px; }
     .gallery-item img { width: 220px; height: 220px; }
     .full-image-wrapper { height: 400px; aspect-ratio: 3 / 4; }
-    .hero { background-position: center; background-size: 185%; }
-    .hero-content p { letter-spacing: 3px; }
-    .hero-content .date { letter-spacing: 2px; }
+    .hero { background-position: center; background-size: 140%; }
+    .hero-content p { letter-spacing: 2px; }
+    .hero-content .date { letter-spacing: 1px; }
 }
