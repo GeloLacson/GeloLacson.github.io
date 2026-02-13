@@ -228,7 +228,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
     .full-image-wrapper { height: 100%; aspect-ratio: 4 / 5; }
     .hero { background-position: center 70%; background-size: 170%; height: 80vh; }
     .hero-content {transform: translate(-20%, -140%);}
-    .hero-content h1 {font-size: 1.8rem;}
+    .hero-content h1 {font-size: 2.4rem;}
     .hero-content p { letter-spacing: 2px; margin-top: 5px; font-size: 0.8rem;}
     .hero-content .date { letter-spacing: 1px; margin-top: 10px; font-size: 0.8rem; }
     .wedding-hashtag,
