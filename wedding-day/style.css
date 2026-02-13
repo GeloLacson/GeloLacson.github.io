@@ -612,8 +612,12 @@ h3 {
   }
   .person {
     width: 100%;
-    max-width: 270px;
+    max-width: 240px;
     margin: 0 auto;
+  }
+  .image-wrapper{
+    width: 225px;
+    height: 225px;
   }
   .details-section {
     padding-bottom: 10px;
@@ -637,8 +641,8 @@ h3 {
     aspect-ratio: 4 / 5;
   }
   .hero {
-    background-position: center 70%;
-    background-size: 170%;
+    background-position: center 60%;
+    background-size: 165%;
     height: 80vh;
   }
   .hero-content {
