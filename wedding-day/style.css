@@ -646,7 +646,7 @@ h3 {
     height: 80vh;
   }
   .hero-content {
-    transform: translate(-20%, -140%);
+    transform: translate(-20%, -105%);
   }
   .hero-content h1 {
     font-size: 40px;
