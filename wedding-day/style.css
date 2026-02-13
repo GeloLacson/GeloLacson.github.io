@@ -228,9 +228,9 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
     .full-image-wrapper { height: 100%; aspect-ratio: 4 / 5; }
     .hero { background-position: center 70%; background-size: 170%; height: 80vh; }
     .hero-content {transform: translate(-20%, -140%);}
-    .hero-content h1 {font-size: 2.4rem;}
-    .hero-content p { letter-spacing: 2px; margin-top: 5px; font-size: 0.8rem;}
-    .hero-content .date { letter-spacing: 1px; margin-top: 10px; font-size: 0.8rem; }
+    .hero-content h1 {font-size: 40px;}
+    .hero-content p { letter-spacing: 2px; margin-top: 5px; font-size: 14px;}
+    .hero-content .date { letter-spacing: 1px; margin-top: 10px; font-size: 15px; }
     .wedding-hashtag,
     .gallery-hashtag {
         font-size: 1.2rem;
@@ -247,5 +247,11 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
 
     .color-group {
         margin-bottom: 40px;
+    }
+    .full-image-text h3{
+        font-weight: bold;
     }   
+    .full-image-text{
+        transform: translate(-50%, -80%);
+    }
 }
