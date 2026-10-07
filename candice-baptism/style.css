@@ -1,0 +1,163 @@
+:root {
+  --bg: #fdfcfa;
+  --bg-alt: #f5f2ec;
+  --text: #2b2b2b;
+  --muted: #7a7670;
+  --accent: #a89676;
+  --line: #e4dfd5;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { font-family: var(--sans); font-weight: 300; color: var(--text); background: var(--bg); line-height: 1.7; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 6%; background: rgba(253,252,250,.92); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.logo { font-family: var(--serif); font-size: 1.5rem; color: var(--text); text-decoration: none; letter-spacing: 2px; }
+.nav nav a { margin-left: 24px; font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+.nav nav a:hover { color: var(--accent); }
+
+/* TYPE */
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
+h1 { font-size: clamp(3rem, 10vw, 5.5rem); line-height: 1.1; margin: 8px 0; }
+h2 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 20px; }
+h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.eyebrow { font-size: .75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.text { max-width: 560px; margin: 0 auto 12px; color: var(--muted); }
+.text.small { font-family: var(--serif); font-size: 1.2rem; color: var(--text); }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+
+/* LAYOUT */
+.section { padding: 90px 6%; max-width: 1000px; margin: 0 auto; }
+.alt { background: var(--bg-alt); max-width: none; }
+.alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.grid { display: grid; gap: 24px; }
+.grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
+.grid.gallery { grid-template-columns: repeat(4, 1fr); margin-top: 30px; }
+
+/* HERO */
+.hero { min-height: 100vh; padding: 120px 6% 70px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.date { font-size: 1rem; letter-spacing: 6px; color: var(--muted); margin-bottom: 36px; }
+.verse { margin-top: 36px; font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--muted); }
+.verse span { font-family: var(--sans); font-style: normal; font-size: .75rem; letter-spacing: 2px; }
+
+/* PHOTOS (placeholders) */
+.photo {
+  display: flex; align-items: center; justify-content: center;
+  background: #ebe7df; color: #b3ad9f; font-size: .8rem; letter-spacing: 2px; text-transform: uppercase;
+  aspect-ratio: 3 / 4; border: 1px solid var(--line);
+}
+.photo-hero { width: min(300px, 70vw); border-radius: 150px 150px 0 0; aspect-ratio: 3 / 4; }
+
+/* CARDS */
+.card { background: var(--bg); border: 1px solid var(--line); padding: 36px 28px; text-align: center; }
+.big { font-family: var(--serif); font-size: 1.5rem; }
+.huge { font-family: var(--serif); font-size: 4.5rem; line-height: 1; color: var(--accent); margin: 4px 0; }
+.card .muted { margin: 10px 0 20px; }
+.map { margin: 14px 0 20px; border: 1px solid var(--line); }
+.map iframe { width: 100%; height: 240px; border: 0; display: block; filter: grayscale(.4); }
+.notes { text-align: center; margin-top: 50px; }
+.notes h3 { margin-top: 18px; }
+
+/* BUTTONS */
+.btn { display: inline-block; padding: 12px 32px; font-size: .78rem; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all .25s; }
+.btn.outline { border: 1px solid var(--accent); color: var(--accent); }
+.btn.outline:hover { background: var(--accent); color: #fff; }
+.btn.solid { margin-top: 16px; background: var(--text); color: #fff; border: 1px solid var(--text); }
+.btn.solid:hover { background: transparent; color: var(--text); }
+
+/* COUNTDOWN */
+.countdown { display: flex; justify-content: center; gap: clamp(18px, 5vw, 48px); margin-top: 20px; }
+.countdown div { text-align: center; }
+.countdown span { display: block; font-family: var(--serif); font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1; }
+.countdown small { font-size: .7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+
+/* FOOTER */
+footer { text-align: center; padding: 36px 6%; border-top: 1px solid var(--line); font-size: .8rem; color: var(--muted); letter-spacing: 1px; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid.two { grid-template-columns: 1fr; }
+  .grid.gallery { grid-template-columns: repeat(2, 1fr); }
+  .nav nav a { margin-left: 14px; font-size: .68rem; letter-spacing: 1px; }
+  .section { padding: 70px 6%; }
+}
+
+/* ===== CROSS & FLORAL DESIGNS ===== */
+
+/* Small, subtle cross above the hero title */
+.cross-icon { width: 12px; height: 18px; fill: var(--accent); opacity: .75; margin: 0 auto 16px; display: block; }
+
+/* Floral corners (hero, welcome, details, countdown, RSVP) */
+.hero, .cross-watermark, .alt { position: relative; overflow: hidden; }
+.hero > *, .cross-watermark > *, .alt > * { position: relative; z-index: 1; }
+
+.hero::before, .hero::after,
+.cross-watermark::before, .cross-watermark::after,
+.alt::before, .alt::after {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  width: 190px; height: 190px;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20220%20220%22%3E%3Cpath%20d%3D%22M8%20214C60%20170%20100%20110%20160%2044%22%20fill%3D%22none%22%20stroke%3D%22%23a9b596%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%2F%3E%3Cellipse%20cx%3D%2246%22%20cy%3D%22170%22%20rx%3D%227%22%20ry%3D%2216%22%20fill%3D%22%23b9c4aa%22%20opacity%3D%22.9%22%20transform%3D%22rotate%28-40%2046%20170%29%20scale%281%29%22%2F%3E%3Cellipse%20cx%3D%2270%22%20cy%3D%22150%22%20rx%3D%227%22%20ry%3D%2216%22%20fill%3D%22%23b9c4aa%22%20opacity%3D%22.9%22%20transform%3D%22rotate%2855%2070%20150%29%20scale%281%29%22%2F%3E%3Cellipse%20cx%3D%2292%22%20cy%3D%22122%22%20rx%3D%227%22%20ry%3D%2216%22%20fill%3D%22%23b9c4aa%22%20opacity%3D%22.9%22%20transform%3D%22rotate%28-35%2092%20122%29%20scale%281%29%22%2F%3E%3Cellipse%20cx%3D%22118%22%20cy%3D%2296%22%20rx%3D%227%22%20ry%3D%2216%22%20fill%3D%22%23b9c4aa%22%20opacity%3D%22.9%22%20transform%3D%22rotate%2860%20118%2096%29%20scale%281%29%22%2F%3E%3Cellipse%20cx%3D%22138%22%20cy%3D%2268%22%20rx%3D%227%22%20ry%3D%2216%22%20fill%3D%22%23b9c4aa%22%20opacity%3D%22.9%22%20transform%3D%22rotate%28-30%20138%2068%29%20scale%281%29%22%2F%3E%3Cg%20transform%3D%22translate%28160%2040%29%20rotate%2810%29%20scale%281.1%29%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%280%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%2872%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28144%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28216%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28288%29%22%2F%3E%3Ccircle%20r%3D%225%22%20fill%3D%22%23c9a77f%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28100%20108%29%20rotate%2830%29%20scale%280.8%29%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23f1e3dc%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%280%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23f1e3dc%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%2872%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23f1e3dc%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28144%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23f1e3dc%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28216%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23f1e3dc%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28288%29%22%2F%3E%3Ccircle%20r%3D%225%22%20fill%3D%22%23c9a77f%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%2852%20160%29%20rotate%28-10%29%20scale%280.6%29%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%280%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%2872%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28144%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28216%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28288%29%22%2F%3E%3Ccircle%20r%3D%225%22%20fill%3D%22%23c9a77f%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%22190%22%20r%3D%224%22%20fill%3D%22%23d8bfb4%22%2F%3E%3Ccircle%20cx%3D%22190%22%20cy%3D%2220%22%20r%3D%223%22%20fill%3D%22%23d8bfb4%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+  opacity: .85;
+}
+/* top-left */
+.hero::before, .cross-watermark::before, .alt::before { top: 0; left: 0; transform: scaleY(-1); }
+/* bottom-right */
+.hero::after, .cross-watermark::after, .alt::after { bottom: 0; right: 0; transform: scaleX(-1); }
+
+/* Hero gets bigger florals */
+.hero::before, .hero::after { width: 260px; height: 260px; }
+
+/* Floral divider under section titles */
+h2::after {
+  content: ""; display: block; width: 120px; height: 24px; margin: 12px auto 4px;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20120%2024%22%3E%3Cpath%20d%3D%22M4%2012H46M74%2012H116%22%20stroke%3D%22%23cdbfa6%22%20stroke-width%3D%221%22%2F%3E%3Cg%20transform%3D%22translate%2860%2012%29%20rotate%280%29%20scale%280.42%29%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%280%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%2872%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28144%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28216%29%22%2F%3E%3Cellipse%20cx%3D%220%22%20cy%3D%22-13%22%20rx%3D%228%22%20ry%3D%2214%22%20fill%3D%22%23ecd9d2%22%20stroke%3D%22%23d8bfb4%22%20stroke-width%3D%22.8%22%20transform%3D%22rotate%28288%29%22%2F%3E%3Ccircle%20r%3D%225%22%20fill%3D%22%23c9a77f%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2212%22%20r%3D%221.6%22%20fill%3D%22%23cdbfa6%22%2F%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2212%22%20r%3D%221.6%22%20fill%3D%22%23cdbfa6%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero::before, .hero::after { width: 150px; height: 150px; }
+  .cross-watermark::before, .cross-watermark::after,
+  .alt::before, .alt::after { width: 110px; height: 110px; opacity: .7; }
+}
+
+
+/* ===== WHITE CAT THEME ===== */
+.cat { width: 84px; aspect-ratio: 120 / 140; height: auto; display: block; overflow: visible; }
+
+/* Hero: cat sitting beside the photo */
+.hero-photo { position: relative; width: min(300px, 70vw); }
+.hero-photo .photo-hero { width: 100%; }
+.cat-hero { position: absolute; right: -44px; bottom: -6px; width: 92px; z-index: 2; }
+
+/* Countdown: cat above the title */
+.cat-center { margin: 0 auto 6px; width: 78px; }
+
+/* Footer: cat sitting on the line */
+footer { position: relative; }
+.cat-footer { position: absolute; top: -70px; left: 8%; width: 74px; }
+
+/* Paw-print trail */
+.paws {
+  width: 180px; height: 28px; margin: 22px auto 0;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%2030%22%3E%3Cg%20transform%3D%22translate%2820%2018%29%20rotate%2870%29%22%20fill%3D%22%23d9cdb8%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%223%22%20rx%3D%225.2%22%20ry%3D%224.4%22%2F%3E%3Ccircle%20cx%3D%22-5.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%22-2%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%222%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%2855%2010%29%20rotate%2870%29%22%20fill%3D%22%23d9cdb8%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%223%22%20rx%3D%225.2%22%20ry%3D%224.4%22%2F%3E%3Ccircle%20cx%3D%22-5.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%22-2%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%222%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28100%2018%29%20rotate%2870%29%22%20fill%3D%22%23d9cdb8%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%223%22%20rx%3D%225.2%22%20ry%3D%224.4%22%2F%3E%3Ccircle%20cx%3D%22-5.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%22-2%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%222%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28135%2010%29%20rotate%2870%29%22%20fill%3D%22%23d9cdb8%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%223%22%20rx%3D%225.2%22%20ry%3D%224.4%22%2F%3E%3Ccircle%20cx%3D%22-5.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%22-2%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%222%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28180%2018%29%20rotate%2870%29%22%20fill%3D%22%23d9cdb8%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%223%22%20rx%3D%225.2%22%20ry%3D%224.4%22%2F%3E%3Ccircle%20cx%3D%22-5.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%22-2%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%222%22%20cy%3D%22-6.8%22%20r%3D%222.1%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22-3%22%20r%3D%222.1%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / contain no-repeat;
+}
+
+@media (max-width: 768px) {
+  .cat-hero { right: -34px; width: 74px; }
+  .cat-footer { width: 60px; top: -56px; left: 6%; }
+}
+
+
+/* ===== SPLIT MAPS (Ceremony + Reception) ===== */
+.card.wide { grid-column: 1 / -1; }
+.card h3 { letter-spacing: 3px; text-transform: uppercase; font-size: 1rem; color: var(--accent); font-family: var(--sans); font-weight: 400; }
+.card .muted { min-height: 3.4em; }
+.card.wide .muted { min-height: 0; }
