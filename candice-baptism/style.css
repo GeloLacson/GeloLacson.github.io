@@ -10,7 +10,7 @@
   --muted: #8d7c75;
   --line: #efdcd8;
   --serif: 'Playfair Display', Georgia, serif;
-  --script: 'Great Vibes', cursive;
+  --script: 'Playball', 'Segoe Script', cursive;
   --sans: 'Lato', Arial, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +44,6 @@ h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
 .grid { display: grid; gap: 24px; }
 .grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
-.grid.gallery { grid-template-columns: repeat(4, 1fr); margin-top: 30px; }
 
 /* HERO */
 .hero { min-height: 100vh; padding: 110px 6% 70px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -116,8 +115,7 @@ h2::after { content: ""; display: block; width: 120px; height: 24px; margin: 12p
 
 @media (max-width: 768px) {
   .grid.two { grid-template-columns: 1fr; }
-  .grid.gallery { grid-template-columns: repeat(2, 1fr); }
-  .nav nav a { margin-left: 12px; font-size: .62rem; letter-spacing: 1.5px; }
+    .nav nav a { margin-left: 12px; font-size: .62rem; letter-spacing: 1.5px; }
   .logo { font-size: 1.5rem; }
   .section { padding: 70px 6%; }
   .hero::before, .hero::after { width: 150px; height: 150px; }
@@ -184,3 +182,32 @@ h2::after { content: ""; display: block; width: 120px; height: 24px; margin: 12p
   .hero::before { top: 52px; }            /* tuck under the nav bar */
   .hero::after  { right: -16px; bottom: -14px; opacity: .9; }
 }
+
+
+/* ===== LIGHTER SCRIPT (Allura): not bold, for hero + nav logo ===== */
+.logo, h1, .tagline, .text.small, .huge { font-weight: 400; font-style: normal; }
+.logo { font-size: 2.1rem; letter-spacing: .5px; }
+h1 { font-size: clamp(4rem, 15vw, 7rem); }
+.tagline { font-size: clamp(2.2rem, 6.5vw, 3rem); }
+.text.small { font-size: 2.4rem; }
+@media (max-width: 768px) { .logo { font-size: 1.8rem; white-space: nowrap; } }
+
+/* ===== FOOTER: always visible on iPhone (Safari toolbar / home indicator) ===== */
+html, body { overflow-x: clip; }
+footer {
+  background: var(--light-pink);
+  padding: 40px 6% calc(48px + env(safe-area-inset-bottom, 0px));
+  min-height: 120px;
+}
+@media (max-width: 768px) {
+  footer { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* ===== SCRIPT FONT: Playball (nav logo, hero headings, signature, date numeral) ===== */
+.logo, h1, .tagline, .text.small, .huge { font-family: var(--script); font-weight: 400; font-style: normal; }
+.logo { font-size: 1.85rem; letter-spacing: 0; }
+h1 { font-size: clamp(3.4rem, 13vw, 6.2rem); line-height: 1.05; }
+.tagline { font-size: clamp(2rem, 6vw, 2.8rem); }
+.text.small { font-size: 2.2rem; }
+.huge { font-size: 4.8rem; }
+@media (max-width: 768px) { .logo { font-size: 1.55rem; white-space: nowrap; } }
